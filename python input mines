@@ -1,0 +1,8 @@
+print("input the numorator of the improper faction")
+numor = int(input())
+print("NUMORATOR>",numor)
+print("input the denominator of the improper fraction")
+Dom = int(input())
+print("DENOMINATOR>", Dom)
+print(numor,'/',Dom,"as a mixed faction is:")
+print("OUTPUT", int(numor / Dom),numor%Dom,'/',Dom)
