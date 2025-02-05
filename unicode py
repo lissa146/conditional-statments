@@ -1,0 +1,12 @@
+letters = ["M", "A", "r", "i","o"]
+
+print()
+print("unicode numbers for" , letters)
+for i in letters:
+    print(ord(i), end = "")
+symbols = [0x1F60A, 0xF601, 0x1F44D, 0x1F389, 0x1F340]
+
+print()
+print("unicode symbols for", symbols)
+for j in symbols:
+    print(chr(j), end= "")
