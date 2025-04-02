@@ -1,0 +1,42 @@
+#include<iostream>
+#include<Windows.h>
+#include<cstdlib>
+using namespace std;
+void randombeeps(int num);
+int main() {
+	int num = 0;
+	srand(time(NULL));
+
+	cout << ("1 low note, 2 medium note, 3 high notes") << endl;
+
+	cin >> num;
+
+	if (num == 1) {
+		Beep(200, 200);
+	}
+
+	else if (num == 2) {
+		Beep(890, 990);
+	}
+
+	else {
+		Beep(1000, 1000);
+	}
+
+	system("pause");
+
+	cout << ("how many notes should i play?") << endl;
+	cin >> num;
+	for (int i = 0; i <= num; i++)
+		Beep(1000, 1000);
+
+	cout << " " << endl;
+	randombeeps(6);
+}
+void randombeeps(int num) {
+	cout << "put number now" << endl;
+
+	for (int i = 0; i <= num; i++)
+	
+		Beep(rand(), rand());
+}
