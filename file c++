@@ -1,0 +1,30 @@
+#include<iostream>
+#include<fstream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main() {
+	srand(time(0));
+	int num;
+	cout << "input a number" << endl;
+	cin >> num;
+
+	ofstream outfile("notes.txt");
+	if (!outfile) {
+		cout << "Error: coulf not create note.txt" << endl;
+		return 1;
+	}
+	for (int i = 0; i <= num; i++) {
+		int freq = rand() % 10;
+		int dur = rand() % 10;
+		outfile << freq << " " << dur << endl;
+	}
+	cout << "notes.txt has been crewated with" << num << "random notes" >> endl;
+	outfile.close();
+	return 0;
+}
+
+// write a program that writes the muliples of 10 (1-100)
+
+//for (int j = 0; j <= 100 
